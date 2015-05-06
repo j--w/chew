@@ -16,8 +16,6 @@ var paths = {
 gulp.task('styles', function() {
   gulp.src(paths.styles)
     .pipe(sass({
-      // includePaths: require('node-bourbon').with('other/path', 'another/path') 
-      // - or - 
       includePaths: require('node-bourbon').includePaths.concat(require('node-neat').includePaths)
     }))
     .pipe(gulp.dest(paths.destStyles))
